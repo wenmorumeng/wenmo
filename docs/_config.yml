@@ -1,0 +1,49 @@
+title: Wenmo Blog
+description: 一个适合部署到 GitHub Pages 的 Argon 风格静态博客。
+# 部署到用户名仓库时:
+# url: "https://yourname.github.io"
+# baseurl: ""
+#
+# 部署到项目仓库时:
+# url: "https://yourname.github.io"
+# baseurl: "/repo-name"
+url: "https://wenmorumeng.github.io"
+baseurl: "/wenmo"
+lang: zh-CN
+timezone: Asia/Shanghai
+permalink: /posts/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins: []
+
+author:
+  name: wenmorumeng
+  bio: 在这里记录文章、碎碎念、关于生活和代码的一点观察。
+  motto: 风会记得每一段认真走过的路。
+  avatar: /assets/images/avatar.svg
+  email: 2943938761@qq.com
+
+appearance:
+  theme_color: "#5e72e4"
+  banner_day: /assets/images/banner-day.svg
+  banner_night: /assets/images/banner-night.svg
+
+announcement: 这里已经切成适合 GitHub Pages 的静态版本。你之后只需要替换配置、背景图和 Markdown 文章内容。
+
+footer:
+  since: 2026
+  text: 由 Jekyll 驱动，风格参考 Argon 主题。
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: wenmorumeng
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page

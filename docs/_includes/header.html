@@ -1,0 +1,15 @@
+<header class="topbar card">
+  <div class="topbar__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__text">{{ site.title }}</span>
+    </a>
+    <nav class="topnav" aria-label="主导航">
+      {% for item in site.data.navigation %}
+        {% assign item_url = item.url | relative_url %}
+        <a class="topnav__link{% if page.url == item.url %} is-active{% endif %}" href="{{ item_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式">夜间</button>
+  </div>
+</header>

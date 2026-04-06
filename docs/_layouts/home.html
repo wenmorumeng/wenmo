@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="home-intro card">
+  <div>
+    <p class="home-intro__eyebrow">首页</p>
+    <h2>像 Argon 一样轻盈的静态主页</h2>
+    <p>这里已经切成 GitHub Pages 能直接部署的版本。你后面新增 Markdown 文章、替换背景图和头像就可以继续扩展。</p>
+  </div>
+  <a class="button-primary" href="{{ '/about/' | relative_url }}">先看如何自定义</a>
+</section>
+
+<section class="post-list" data-search-scope>
+  {% for post in site.posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+  <p class="search-empty card" hidden data-search-empty>没有找到匹配的文章，试试换一个关键词。</p>
+</section>

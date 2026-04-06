@@ -1,0 +1,78 @@
+<aside class="sidebar">
+  {% if site.announcement %}
+    <section class="card announcement-card">
+      <div class="announcement-card__label">公告</div>
+      <p>{{ site.announcement }}</p>
+    </section>
+  {% endif %}
+
+  <section class="card sidebar-banner">
+    <div class="sidebar-banner__body">
+      <p class="sidebar-banner__eyebrow">欢迎来到</p>
+      <h1>{{ site.title }}</h1>
+      <p class="sidebar-banner__subtitle">{{ site.author.motto }}</p>
+    </div>
+    <nav class="sidebar-menu" aria-label="侧边导航">
+      {% for item in site.data.navigation %}
+        <a class="sidebar-menu__item{% if page.url == item.url %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <label class="search-box">
+      <span class="search-box__label">搜索文章</span>
+      <input class="search-box__input" type="search" placeholder="按标题或标签搜索" data-search-input>
+    </label>
+  </section>
+
+  <section class="card sidebar-panel">
+    <div class="sidebar-tabs" role="tablist" aria-label="侧边面板">
+      <button class="sidebar-tabs__button is-active" type="button" data-tab-target="overview">站点概览</button>
+      <button class="sidebar-tabs__button" type="button" data-tab-target="toc">文章目录</button>
+    </div>
+
+    <div class="sidebar-tab is-active" data-tab-panel="overview">
+      <div class="author-card">
+        <img class="author-card__avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+        <h2>{{ site.author.name }}</h2>
+        <p>{{ site.author.bio }}</p>
+      </div>
+
+      <div class="site-state">
+        <div class="site-state__item">
+          <span class="site-state__count">{{ site.posts | size }}</span>
+          <span class="site-state__label">文章</span>
+        </div>
+        <div class="site-state__item">
+          <span class="site-state__count">{{ site.categories | size }}</span>
+          <span class="site-state__label">分类</span>
+        </div>
+        <div class="site-state__item">
+          <span class="site-state__count">{{ site.tags | size }}</span>
+          <span class="site-state__label">标签</span>
+        </div>
+      </div>
+
+      <div class="year-progress">
+        <div class="year-progress__row">
+          <span>年度进度</span>
+          <span data-year-progress-text>0%</span>
+        </div>
+        <div class="year-progress__track">
+          <span class="year-progress__bar" data-year-progress-bar></span>
+        </div>
+      </div>
+
+      {% if site.data.social and site.data.social.size > 0 %}
+        <div class="social-links">
+          {% for item in site.data.social %}
+            <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.title }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="sidebar-tab toc-panel" data-tab-panel="toc">
+      <div class="toc-panel__empty" data-toc-empty>这篇页面还没有目录</div>
+      <nav class="toc-panel__list" data-post-toc aria-label="文章目录"></nav>
+    </div>
+  </section>
+</aside>

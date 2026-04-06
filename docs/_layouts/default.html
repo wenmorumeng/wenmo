@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <div class="page-backdrop"></div>
+    <div class="page-shell">
+      {% include header.html %}
+
+      <section class="hero card">
+        <div class="hero__text">
+          <p class="hero__eyebrow">{{ page.hero_label | default: "ARGON STYLE STATIC BLOG" }}</p>
+          <h1>{{ page.hero_title | default: page.title | default: site.title }}</h1>
+          <p>{{ page.description | default: site.description }}</p>
+        </div>
+      </section>
+
+      <div class="layout">
+        {% include sidebar.html %}
+
+        <main class="content">
+          {{ content }}
+          {% include footer.html %}
+        </main>
+      </div>
+    </div>
+
+    <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  </body>
+</html>

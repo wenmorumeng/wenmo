@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post-detail card">
+  <header class="post-detail__header">
+    {% if page.cover %}
+      <img class="post-detail__cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="post-detail__meta">
+      <span>{{ page.date | date: "%Y-%m-%d" }}</span>
+      <span>{{ page.content | number_of_words | divided_by: 180 | plus: 1 }} 分钟阅读</span>
+      {% if page.categories and page.categories.size > 0 %}
+        <span>{{ page.categories | join: " / " }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content" data-post-content>
+    {{ content }}
+  </div>
+
+  {% if page.tags and page.tags.size > 0 %}
+    <footer class="post-detail__footer">
+      {% for tag in page.tags %}
+        <span class="tag">#{{ tag }}</span>
+      {% endfor %}
+    </footer>
+  {% endif %}
+</article>
