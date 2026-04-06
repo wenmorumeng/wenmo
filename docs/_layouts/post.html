@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="post-page">
+  <div class="shell">
+    <header class="post-hero reveal">
+      <p class="post-meta">{{ page.date | date: "%Y.%m.%d" }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.excerpt %}
+        <p class="post-dek">{{ page.excerpt }}</p>
+      {% endif %}
+      {% if page.tags %}
+        <ul class="tag-list" role="list">
+          {% for tag in page.tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </header>
+
+    <div class="article-body reveal">
+      {{ content }}
+    </div>
+  </div>
+</article>
+

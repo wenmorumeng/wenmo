@@ -1,0 +1,87 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="shell hero-shell">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Personal site / Notes / Journal</p>
+      <h1>{{ site.author.name }}</h1>
+      <p class="hero-tagline">{{ site.author.tagline }}</p>
+      <p class="hero-description">{{ site.author.bio }}</p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/journal/' | relative_url }}">阅读文章</a>
+        <a class="button button-secondary" href="{{ '/about/' | relative_url }}">了解更多</a>
+      </div>
+
+      <ul class="social-list" role="list">
+        {% for item in site.data.social %}
+          {% assign is_external = false %}
+          {% if item.url contains 'http://' or item.url contains 'https://' or item.url contains 'mailto:' %}
+            {% assign is_external = true %}
+          {% endif %}
+          <li>
+            <a href="{% if is_external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if is_external %}target="_blank" rel="noreferrer"{% endif %}>
+              <span>{{ item.label }}</span>
+              <span>{{ item.handle }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="hero-card reveal reveal-delay">
+      <div class="portrait-wrap">
+        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }} avatar">
+      </div>
+      <div class="hero-card-copy">
+        <p>{{ site.author.location }}</p>
+        <p>Writing about software, design systems, calm products, and the craft behind digital work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">A quiet dashboard</p>
+      <h2>近期状态</h2>
+    </div>
+
+    <div class="note-grid">
+      {% for note in site.data.notes %}
+        <article class="note-card reveal">
+          <p class="note-title">{{ note.title }}</p>
+          <p>{{ note.body }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="journal">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Recent writing</p>
+      <h2>文章列表</h2>
+    </div>
+
+    <div class="post-grid">
+      {% for post in site.posts limit: 6 %}
+        <article class="post-card reveal">
+          <a class="post-card-link" href="{{ post.url | relative_url }}">
+            <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }}</p>
+            <h3>{{ post.title }}</h3>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <span class="post-readmore">Read article</span>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="section-actions reveal">
+      <a class="button button-secondary" href="{{ '/journal/' | relative_url }}">查看全部文章</a>
+    </div>
+  </div>
+</section>

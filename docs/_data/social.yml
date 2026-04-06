@@ -1,0 +1,15 @@
+- label: "GitHub"
+  handle: "@wenmorumeng"
+  url: "https://github.com/wenmorumeng"
+
+- label: "X"
+  handle: "@yourhandle"
+  url: "https://x.com/yourhandle"
+
+- label: "Email"
+  handle: "2943938761@qq.com"
+  url: "mailto:2943938761@qq.com"
+
+- label: "RSS"
+  handle: "subscribe"
+  url: "/feed.xml"
