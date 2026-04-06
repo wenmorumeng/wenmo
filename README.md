@@ -1,4 +1,4 @@
-# 闻墨如梦
+# 闻陌如梦
 
 这是 `wenmorumeng/wenmo` 的 GitHub Pages 博客源码。
 

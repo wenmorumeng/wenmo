@@ -1,4 +1,4 @@
-title: 闻墨如梦
+title: 闻陌如梦
 description: 我在这里写生活、阅读、代码，还有一些不想被时间轻易冲淡的念头。
 url: "https://wenmorumeng.github.io"
 baseurl: "/wenmo"
@@ -11,10 +11,10 @@ kramdown:
 plugins: []
 
 author:
-  name: 闻墨
+  name: 闻陌
   signature: Wenmo
-  bio: 喜欢把零碎灵感、路上的风和写代码时忽然想明白的小事认真记下来。
-  motto: 写给自己，也写给偶然路过的你。
+  bio: 会在这里记录文章、日常、喜欢的东西，还有一些阶段性的想法。
+  motto: 随便写写，也认真写写。
   avatar: /assets/images/avatar.svg
   email: 2943938761@qq.com
   location: 中国
@@ -24,11 +24,11 @@ appearance:
   banner_day: /assets/images/banner-day.svg
   banner_night: /assets/images/banner-night.svg
 
-announcement: 这里是闻墨如梦。它刚刚从头整理好，接下来会慢慢长出真正属于我的文章、图片和日常。
+announcement: 这里是闻陌如梦。现在页面已经搭好了，后面我会把自己的文章、图片和日常一点点补进来。
 
 footer:
   since: 2026
-  text: 由 GitHub Pages 托管，页面风格参考 Argon 的轻盈感，但会继续长成更像“闻墨如梦”的样子。
+  text: 用 GitHub Pages 搭起来的个人博客，后面会继续慢慢补内容。
 
 defaults:
   - scope:
@@ -36,7 +36,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author: 闻墨
+      author: 闻陌
   - scope:
       path: ""
       type: pages

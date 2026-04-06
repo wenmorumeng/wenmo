@@ -1,4 +1,4 @@
-# 闻墨如梦：GitHub Pages 发布说明
+# 闻陌如梦：GitHub Pages 发布说明
 
 这个仓库已经整理成适合 GitHub Pages 的静态博客，只需要发布 `docs/` 目录。
 
