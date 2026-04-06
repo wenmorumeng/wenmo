@@ -1,18 +1,36 @@
 ---
 layout: default
 ---
-<section class="home-intro card">
-  <div>
-    <p class="home-intro__eyebrow">首页</p>
-    <h2>像 Argon 一样轻盈的静态主页</h2>
-    <p>这里已经切成 GitHub Pages 能直接部署的版本。你后面新增 Markdown 文章、替换背景图和头像就可以继续扩展。</p>
+<section class="intro-card card">
+  <div class="intro-card__copy">
+    <p class="intro-card__eyebrow">写给今天，也写给以后</p>
+    <h2>我想把这里做成一个真正会反复回来的地方。</h2>
+    <p>它不会只放“作品展示”，也不打算端着。这里更像我的私人索引页，会慢慢放进生活片段、阅读痕迹、代码记录，以及那些暂时还说不清但不想丢掉的东西。</p>
   </div>
-  <a class="button-primary" href="{{ '/about/' | relative_url }}">先看如何自定义</a>
+  <div class="intro-card__aside">
+    <p>如果你恰好路过，希望这里看起来像一间有灯的小房间，而不是一张模板页面。</p>
+  </div>
 </section>
 
-<section class="post-list" data-search-scope>
+<section class="note-grid">
+  {% for note in site.data.notes %}
+    <article class="note-card card">
+      <p class="note-card__title">{{ note.title }}</p>
+      <p>{{ note.text }}</p>
+    </article>
+  {% endfor %}
+</section>
+
+<section class="section-head">
+  <div>
+    <p class="section-head__eyebrow">最近写下</p>
+    <h2>文章</h2>
+  </div>
+  <p>先从几篇占位文章开始，后面会逐步换成真正属于我的内容。</p>
+</section>
+
+<section class="post-stream">
   {% for post in site.posts %}
     {% include post-card.html post=post %}
   {% endfor %}
-  <p class="search-empty card" hidden data-search-empty>没有找到匹配的文章，试试换一个关键词。</p>
 </section>

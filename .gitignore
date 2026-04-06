@@ -1,16 +1,3 @@
-# Keep this repository focused on the GitHub Pages static site.
-*
-
-# Always keep git metadata helpers.
-!.gitignore
-!README.md
-!GitHub-Pages部署说明.md
-
-# Publishable static site.
-!docs/
-!docs/**
-
-# macOS / local build artifacts.
 .DS_Store
 docs/.jekyll-cache/
 docs/.sass-cache/

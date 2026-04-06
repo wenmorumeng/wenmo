@@ -1,33 +1,30 @@
-# GitHub Pages 静态博客
+# 闻墨如梦
 
-这个目录原本包含一份 `WordPress` 博客源码。我已经另外整理出一套适合 `GitHub Pages` 的静态博客版本，放在 `docs/` 目录下。
+这是 `wenmorumeng/wenmo` 的 GitHub Pages 博客源码。
 
-## 仓库里哪些内容会上传
+## 现在的结构
 
-当前 `.gitignore` 已经配置成只跟踪这些内容：
+- `docs/`：站点源码
+- `docs/_posts/`：文章
+- `docs/assets/`：样式、脚本、图片
 
-- `docs/`
-- `README.md`
-- `GitHub-Pages部署说明.md`
+## 部署方式
 
-这样做的目的是让你的 GitHub 仓库保持干净，只发布真正需要的静态博客文件，不把原始 `WordPress` 程序一起推上去。
+在 GitHub 仓库里将 Pages 的发布源设置为：
 
-## 站点特点
+- Branch: `main`
+- Folder: `/docs`
 
-- Argon 风格的左侧栏和卡片文章列表
-- 顶部横幅和夜间模式
-- Markdown 写作
-- 文章目录、归档页、关于页、留言板占位页
-- 适合直接部署到 GitHub Pages
+站点地址：
 
-## 常改文件
+```text
+https://wenmorumeng.github.io/wenmo/
+```
+
+## 后续最常改的内容
 
 - `docs/_config.yml`
-- `docs/_data/navigation.yml`
-- `docs/_data/social.yml`
 - `docs/_posts/`
 - `docs/assets/images/`
-
-## 部署
-
-详细步骤见 `GitHub-Pages部署说明.md`。
+- `docs/about.md`
+- `docs/message-board.md`

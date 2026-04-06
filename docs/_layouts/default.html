@@ -3,23 +3,22 @@
   <head>
     {% include head.html %}
   </head>
-  <body>
-    <div class="page-backdrop"></div>
-    <div class="page-shell">
-      {% include header.html %}
+  <body style="--banner-day: url('{{ site.appearance.banner_day | relative_url }}'); --banner-night: url('{{ site.appearance.banner_night | relative_url }}');">
+    {% include header.html %}
 
-      <section class="hero card">
-        <div class="hero__text">
-          <p class="hero__eyebrow">{{ page.hero_label | default: "ARGON STYLE STATIC BLOG" }}</p>
-          <h1>{{ page.hero_title | default: page.title | default: site.title }}</h1>
-          <p>{{ page.description | default: site.description }}</p>
-        </div>
-      </section>
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow">{{ page.hero_label | default: "WENMO BLOG" }}</p>
+        <h1>{{ page.hero_title | default: page.title | default: site.title }}</h1>
+        <p class="hero__lead">{{ page.description | default: site.description }}</p>
+      </div>
+    </section>
 
-      <div class="layout">
+    <div class="content-frame">
+      <div class="content-grid">
         {% include sidebar.html %}
-
-        <main class="content">
+        <main class="main-column">
           {{ content }}
           {% include footer.html %}
         </main>

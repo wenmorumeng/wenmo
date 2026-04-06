@@ -1,12 +1,5 @@
-title: Wenmo Blog
-description: 一个适合部署到 GitHub Pages 的 Argon 风格静态博客。
-# 部署到用户名仓库时:
-# url: "https://yourname.github.io"
-# baseurl: ""
-#
-# 部署到项目仓库时:
-# url: "https://yourname.github.io"
-# baseurl: "/repo-name"
+title: 闻墨如梦
+description: 我在这里写生活、阅读、代码，还有一些不想被时间轻易冲淡的念头。
 url: "https://wenmorumeng.github.io"
 baseurl: "/wenmo"
 lang: zh-CN
@@ -18,22 +11,24 @@ kramdown:
 plugins: []
 
 author:
-  name: wenmorumeng
-  bio: 在这里记录文章、碎碎念、关于生活和代码的一点观察。
-  motto: 风会记得每一段认真走过的路。
+  name: 闻墨
+  signature: Wenmo
+  bio: 喜欢把零碎灵感、路上的风和写代码时忽然想明白的小事认真记下来。
+  motto: 写给自己，也写给偶然路过的你。
   avatar: /assets/images/avatar.svg
   email: 2943938761@qq.com
+  location: 中国
 
 appearance:
   theme_color: "#5e72e4"
   banner_day: /assets/images/banner-day.svg
   banner_night: /assets/images/banner-night.svg
 
-announcement: 这里已经切成适合 GitHub Pages 的静态版本。你之后只需要替换配置、背景图和 Markdown 文章内容。
+announcement: 这里是闻墨如梦。它刚刚从头整理好，接下来会慢慢长出真正属于我的文章、图片和日常。
 
 footer:
   since: 2026
-  text: 由 Jekyll 驱动，风格参考 Argon 主题。
+  text: 由 GitHub Pages 托管，页面风格参考 Argon 的轻盈感，但会继续长成更像“闻墨如梦”的样子。
 
 defaults:
   - scope:
@@ -41,7 +36,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author: wenmorumeng
+      author: 闻墨
   - scope:
       path: ""
       type: pages
