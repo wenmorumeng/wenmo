@@ -1,2 +1,2 @@
-# Personal Blog for GitHub Pages
+# Personal Blog
 wenmo的个人博客
