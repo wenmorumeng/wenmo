@@ -1,0 +1,40 @@
+title: "wenmorumeng"
+description: "A quiet corner for writing about software, product thinking, and calm digital craft."
+url: "https://wenmorumeng.github.io"
+baseurl: "/wenmo"
+lang: "zh-CN"
+timezone: "Asia/Shanghai"
+permalink: /journal/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+author:
+  name: "wenmorumeng"
+  tagline: "独立开发者 / 技术写作者 / 产品体验观察者"
+  bio: "我写代码，也写文字。这里记录软件、设计、写作与长期主义的实践，希望内容像界面一样，克制、清晰、耐看。"
+  location: "Wuxi, China"
+  email: "2943938761@qq.com"
+  avatar: "/assets/images/avatar.svg"
+
+navigation:
+  - title: "首页"
+    url: "/"
+  - title: "文章"
+    url: "/journal/"
+  - title: "关于"
+    url: "/about/"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
